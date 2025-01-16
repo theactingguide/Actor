@@ -1,5 +1,6 @@
 import 'package:actor/Controller/Authentication/signpcontroller.dart';
 import 'package:actor/View/Authentication/login.dart';
+import 'package:actor/View/Authentication/signupotppage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -54,21 +55,6 @@ class SignupScreen extends StatelessWidget {
                           return signpcontroller.validateName(Value!);
                         },
                       ),
-                      const SizedBox(height: 10),
-                      TextFormField(
-                          controller: signpcontroller.phoneController,
-                          decoration: InputDecoration(
-                            labelText: "Mobile Number",
-                            prefixIcon: Icon(Icons.phone, color: Colors.purple),
-                            hintText: "Mobile Number",
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          keyboardType: TextInputType.phone,
-                          validator: (value) {
-                            return signpcontroller.validatePhone(value!);
-                          }),
                       const SizedBox(height: 10),
                       TextFormField(
                           controller: signpcontroller.emailController,
