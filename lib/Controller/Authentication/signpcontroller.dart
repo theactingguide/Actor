@@ -1,4 +1,5 @@
 import 'package:actor/View/Home/Homescreen.dart';
+import 'package:actor/View/Home/usernamescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,7 +33,7 @@ class Signpcontroller extends GetxController {
 
         User? user = FirebaseAuth.instance.currentUser;
         print(user);
-        Get.to(() => Homescreen());
+        Get.to(() => Usernamescreen());
       }
     } on FirebaseAuthException catch (e) {
       print("Error:${e.code}");

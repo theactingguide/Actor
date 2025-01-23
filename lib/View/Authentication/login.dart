@@ -1,4 +1,5 @@
 import 'package:actor/Controller/Authentication/logincontroller.dart';
+import 'package:actor/View/Authentication/emailscreen.dart';
 import 'package:actor/View/Authentication/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,6 +45,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
                           TextFormField(
+                            keyboardType: TextInputType.emailAddress,
                             controller: loginController.emailController,
                             decoration: InputDecoration(
                               labelText: "Email",
@@ -92,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                             alignment: Alignment.centerRight,
                             child: TextButton(
                               onPressed: () {
-                                loginController.resetpassword();
+                                Get.to(() => Emailscreen());
                               },
                               child: const Text(
                                 "Forgot Password?",

@@ -1,6 +1,6 @@
 import 'package:actor/View/Authentication/login.dart';
 import 'package:actor/View/Home/Homescreen.dart';
-
+import 'package:actor/View/Home/usernamescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return GetMaterialApp(home: Usernamescreen());
     return GetMaterialApp(
       home: FirebaseAuth.instance.currentUser != null
           ? Homescreen()
